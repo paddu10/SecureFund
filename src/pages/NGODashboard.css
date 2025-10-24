@@ -1,0 +1,12 @@
+/* Re-uses many styles from DonorDashboard.css */
+.dashboard-container { padding: 40px; max-width: 1200px; margin: auto; }
+.dashboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.logout-btn { background: var(--danger-red); color: var(--white); padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; }
+.stat-card { background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 1rem; }
+.history-table { margin-top: 2rem; background: var(--white); padding: 2rem; border-radius: 10px; }
+
+/* NGO specific styles */
+.ngo-actions input[type="file"] {
+  margin-top: 1rem;
+  font-family: inherit;
+}
