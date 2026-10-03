@@ -1,70 +1,176 @@
-# Getting Started with Create React App
+🔐 SecureFund
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Blockchain-Based Transparent Donation Platform
 
-## Available Scripts
+SecureFund is a blockchain-based donation platform designed to improve transparency, transaction verification, and trust in online donations. It combines React.js, Firebase, and Ethereum smart contracts to provide secure user management, NGO campaigns, donation tracking, and verifiable blockchain transactions.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+👤 Donor
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Secure registration and login
+- Browse NGO campaigns
+- Make donations using MetaMask
+- View donation history
+- Track transactions
+- Verify blockchain transaction hashes
 
-### `npm test`
+🏢 NGO
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- NGO registration and profile
+- Create and manage campaigns
+- View received donations
+- Track campaign progress
+- View transaction records
 
-### `npm run build`
+🛡️ Admin
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Manage users
+- Verify NGOs
+- Approve campaigns
+- Monitor donations
+- View platform statistics
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+⛓️ Blockchain
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Solidity smart contracts
+- Ethereum Sepolia Testnet
+- Immutable transaction records
+- Transparent donation tracking
+- MetaMask integration
+- Transaction hash verification
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Frontend: React.js, Tailwind CSS
+- Authentication: Firebase Authentication
+- Database: Cloud Firestore
+- Blockchain: Ethereum, Sepolia Testnet
+- Smart Contract: Solidity
+- Wallet: MetaMask
+- Blockchain Library: Ethers.js
+- Development: Hardhat, Node.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🌳 Project Architecture
 
-## Learn More
+SecureFund
+│
+├── Frontend
+│   ├── React.js
+│   └── Tailwind CSS
+│
+├── Authentication
+│   └── Firebase Authentication
+│
+├── Database
+│   └── Cloud Firestore
+│
+├── Blockchain
+│   ├── Solidity Smart Contract
+│   ├── Ethers.js
+│   ├── MetaMask
+│   └── Sepolia Testnet
+│
+└── User Roles
+    ├── Donor
+    ├── NGO
+    └── Admin
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔄 How It Works
 
-### Code Splitting
+User
+ │
+ ├── Donor ──→ Select Campaign ──→ Donate
+ │                                  │
+ ├── NGO ────→ Create Campaign     ▼
+ │                         MetaMask Wallet
+ │                                  │
+ └── Admin ──→ Verify NGO            ▼
+                         Smart Contract
+                                  │
+                                  ▼
+                         Ethereum Sepolia
+                                  │
+                                  ▼
+                           Transaction Hash
+                                  │
+                                  ▼
+                              Firestore
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+⚙️ Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Clone the Repository
 
-### Making a Progressive Web App
+git clone https://github.com/YOUR_USERNAME/SecureFund.git
+cd SecureFund
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Install Dependencies
 
-### Advanced Configuration
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Configure Firebase
 
-### Deployment
+Create a Firebase project and enable:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Firebase Authentication
+- Cloud Firestore
 
-### `npm run build` fails to minify
+Add your Firebase configuration to the environment variables.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_APP_ID=your_app_id
+
+4. Configure Blockchain
+
+Connect MetaMask to the Sepolia Testnet and add the deployed smart contract address.
+
+VITE_CONTRACT_ADDRESS=your_contract_address
+
+5. Run the Application
+
+npm run dev
+
+The application will normally run at:
+
+http://localhost:5173
+
+---
+
+🔮 Future Scope
+
+- AI-based suspicious transaction detection
+- Automated NGO verification
+- IPFS-based document storage
+- Multi-chain support
+- UPI and traditional payment integration
+- Mobile application
+- Advanced donation analytics
+- Automated compliance verification
+
+---
+
+🎯 Objective
+
+The objective of SecureFund is to demonstrate how blockchain, smart contracts, cloud services, and modern web technologies can be integrated to create a more transparent and verifiable donation ecosystem.
+
+---
+
+👨‍💻 Project
+
+SecureFund — Blockchain-Based Donation Platform
+
+"React.js" • "Tailwind CSS" • "Firebase" • "Solidity" • "Ethereum" • "Sepolia" • "MetaMask" • "Ethers.js" • "Hardhat"
+
+«Note: SecureFund is an academic/research prototype developed for demonstrating blockchain-based donation tracking and verification.»
